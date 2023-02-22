@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".InicioSesion"
+    android:orientation="vertical"
+    android:background="#6984A1">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#193336"
+        android:fontFamily="monospace"
+        android:text="INICIA SESIÓN"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#F9FEFE"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        android:visibility="visible" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="50sp"
+        android:visibility="visible" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="#3D336C"
+            android:fontFamily="monospace"
+            android:text="Correo"
+            android:textAlignment="center"
+            android:textColor="#F9FEFE"
+            android:textSize="20sp"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/ecorreo"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:width="150dp"
+            android:gravity="center"
+            android:maxLength="20"
+            android:inputType="textEmailAddress"
+            android:textSize="24sp"
+            android:textColor="#F2FFFE"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="50sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="#3D336C"
+            android:fontFamily="monospace"
+            android:text="Contraseña"
+            android:textAlignment="center"
+            android:textColor="#F9FEFE"
+            android:textSize="20sp"
+            android:textStyle="bold|italic" />
+
+
+        <EditText
+            android:id="@+id/econtraseña"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:width="150dp"
+            android:gravity="center"
+            android:maxLength="20"
+            android:inputType="textPassword"
+            android:textSize="24sp"
+            android:textColor="#F2FFFE"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/bsube"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="300dp"
+            android:backgroundTint="#390C5A"
+            android:textColor="#FFDDF8"
+            android:text="INICIA SESION"
+            android:textSize="24dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="¿No tienes una cuenta? Registrate"
+            android:textAlignment="center"
+            android:textColor="#F9FEFE"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            android:visibility="visible" />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="55dp"
+            android:id="@+id/Sin"
+            android:src="@drawable/vacio"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/bregistra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="300dp"
+            android:backgroundTint="#390C5A"
+            android:textColor="#FFDDF8"
+            android:text="REGISTRATE"
+            android:textSize="24dp" />
+    </LinearLayout>
+</LinearLayout>
