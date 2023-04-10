@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>Registro de reporte </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="css/estiloLog.css">
+          <link rel="stylesheet" type="text/css" href="css/styles.css">
+    
+    </head>
+    
+    <body class="searchFor">
+        
+        <form action="JSP/AltasReporte.jsp" method="post" name="altas">
+    
+     
+      <p>Información del reporte</p>
+      <input type="text" name="descripción"  placeholder="Descripción"/>
+        <label for="fecha">Fecha de envío:</label>
+        <input type="text" id="fecha" name="fecha" readonly><br><br>
+        <label for="hora">Hora de envío:</label>
+        <input type="text" id="hora" name="hora" readonly>
+        <button onclick="guardarFechaYHora()">Enviar</button><br><br>
+        <select name="destinatario">
+        <p>Destinatario</p>    
+        <option value="1">Gerente de soporte</option>
+       </select>
+    </form>
+        <script>
+            function guardarFechaYHora() {
+  // Capturamos la fecha actual
+  var fecha = new Date();
+  var dia = fecha.getDate();
+  var mes = fecha.getMonth() + 1; // Sumamos 1 porque los meses van de 0 a 11
+  var anio = fecha.getFullYear();
+
+  // Formateamos la fecha para que tenga dos dígitos en caso de que sea menor que 10
+  if (dia < 10) { dia = "0" + dia; }
+  if (mes < 10) { mes = "0" + mes; }
+
+  // Mostramos la fecha en el campo correspondiente
+  document.getElementById("fecha").value = dia + "/" + mes + "/" + anio;
+
+  // Capturamos la hora actual
+  var hora = fecha.getHours();
+  var minutos = fecha.getMinutes();
+  var segundos = fecha.getSeconds();
+
+  // Formateamos la hora para que tenga dos dígitos en caso de que sea menor que 10
+  if (hora < 10) { hora = "0" + hora; }
+  if (minutos < 10) { minutos = "0" + minutos; }
+  if (segundos < 10) { segundos = "0" + segundos; }
+
+  // Mostramos la hora en el campo correspondiente
+  document.getElementById("hora").value = hora + ":" + minutos + ":" + segundos;
+}
+        </script>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2 abr. 2023, 19:09:07
+    Author     : Define PC
+*/
+form {
+  max-width: 600px; /* Establece el ancho máximo del formulario */
+  margin: 0 auto; /* Centra el formulario en la página */
+  padding: 20px; /* Agrega un poco de espacio alrededor del formulario */
+  font-family: Arial, sans-serif; /* Establece la fuente para el formulario */
+  background-color: #f2f2f2; /* Establece el color de fondo del formulario */
+}
+
+label {
+  display: block; /* Hace que cada etiqueta ocupe una línea completa */
+  margin-bottom: 10px; /* Agrega un poco de espacio debajo de cada etiqueta */
+  font-weight: bold; /* Hace que cada etiqueta sea negrita */
+}
+
+input[type="text"], 
+input[type="email"], 
+textarea {
+  width: 100%; /* Hace que los campos de entrada ocupen todo el ancho disponible */
+  padding: 10px; /* Agrega un poco de espacio alrededor de los campos de entrada */
+  margin-bottom: 20px; /* Agrega un poco de espacio debajo de cada campo de entrada */
+  border: none; /* Elimina el borde alrededor de los campos de entrada */
+  border-radius: 3px; /* Agrega un pequeño borde redondeado a los campos de entrada */
+  box-sizing: border-box; /* Hace que el tamaño de los campos de entrada incluya el relleno */
+  background-color: #fff; /* Establece el color de fondo de los campos de entrada */
+  color: #555; /* Establece el color del texto de los campos de entrada */
+}
+
+button[type="submit"] {
+  background-color: #4CAF50; /* Establece el color de fondo del botón de envío */
+  color: #fff; /* Establece el color del texto del botón de envío */
+  padding: 10px 20px; /* Agrega un poco de espacio alrededor del botón de envío */
+  border: none; /* Elimina el borde alrededor del botón de envío */
+  border-radius: 3px; /* Agrega un pequeño borde redondeado al botón de envío */
+  cursor: pointer; /* Hace que el cursor se convierta en una mano cuando se pasa sobre el botón */
+}
