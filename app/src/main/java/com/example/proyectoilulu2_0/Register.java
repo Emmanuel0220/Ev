@@ -10,6 +10,10 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import com.example.proyectoilulu2_0.Encriptación.Sha1;
+import com.example.proyectoilulu2_0.Json.Info;
+import com.example.proyectoilulu2_0.Json.Json;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -27,7 +31,7 @@ public class Register extends AppCompatActivity {
     public void Registrarse (View v){
 
         EditText Name = (EditText) findViewById(R.id.editTextRName);
-        EditText firstName = (EditText) findViewById(R.id.editTextRfirstName);
+        EditText firstName = (EditText) findViewById(R.id.editTextRPassword);
         EditText lastName = (EditText) findViewById(R.id.editTextRlastName);
         EditText userName = (EditText) findViewById(R.id.editTextRuserName);
         EditText Mail = (EditText) findViewById(R.id.editTextRMail);
@@ -71,10 +75,10 @@ public class Register extends AppCompatActivity {
                 if(firstName.length() > 15){mensaje = "Apellido Paterno Muy Largo";}
                 if(lastName.length() > 15){mensaje = "Apellido Materno Muy Largo";}
                 if(userName.length() > 20){mensaje = "Nombre de Usuario Muy Largo";}
-                if(TipoCorreo == false){mensaje = "Correo Invalido";}
+                if(TipoCorreo == false){mensaje = "Correo Invalido, Intente con los dominios @gmail.com, @hotmail.com, @outlook.com";}
                 if(Mail.length() > 25){mensaje = "Correo Muy Largo";}
-                if(Age.length() > 2){mensaje = "Edad Invalida";}
-                if(Number.length() != 8){mensaje = "Numero Invalido";}
+                if(Age.length() > 2){mensaje = "Edad Invalida, Intente con una edad mas corta";}
+                if(Number.length() != 8){mensaje = "Numero Invalido, Intente con un numero de 8 digitos";}
                 if(Password.length() > 30){mensaje = "Contraseña Muy Larga";}
             }else{
                 try {
@@ -101,26 +105,47 @@ public class Register extends AppCompatActivity {
                     boolean BucleArchivo = true;
                     int x = 1;
                     while (BucleArchivo) {
-                        File Cfile = new File(getApplicationContext().getFilesDir() + "/" + "Archivo" + x + ".txt");
+                        File Cfile = new File(getApplicationContext().getFilesDir() + "/" + "ArchivoMyPaginaWeb" + x + ".txt");
                         if (Cfile.exists()) {
-                            BufferedReader file = new BufferedReader(new InputStreamReader(openFileInput("Archivo" + x + ".txt")));
+                            BufferedReader file = new BufferedReader(new InputStreamReader(openFileInput("ArchivoMyPaginaWeb" + x + ".txt")));
                             String lineaTexto = file.readLine();
+                            String completoTexto = "";
+                            while(lineaTexto != null){
+                                completoTexto = completoTexto + lineaTexto;
+                                lineaTexto = file.readLine();
+                            }
                             file.close();
 
-                            Info datos = json.leerJson(lineaTexto);
+                            Info datos = json.leerJson(completoTexto);
                             String ValoruserName2 = datos.getUserName();
+                            String ValorMail2 = datos.getMail();
+                            int ValorNumber2 = datos.getNumber();
 
-                            if (ValoruserName.equals(ValoruserName2)) {
-                                mensaje = "Usuario Ya Existente";
+                            if (ValoruserName.equals(ValoruserName2) || ValorMail.equals(ValorMail2) || ValorNumber == ValorNumber2) {
+                                if(ValorMail.equals(ValorMail2)){mensaje = "Correo Ya Registrado";}
+                                if(ValorNumber == ValorNumber2){mensaje = "Numero Ya Registrado";}
+                                if(ValoruserName.equals(ValoruserName2)){mensaje = "Usuario Ya Existente";}
                                 BucleArchivo = false;
                             } else {
                                 x = x + 1;
                             }
                         } else {
-                            BufferedWriter file = new BufferedWriter(new OutputStreamWriter(openFileOutput("Archivo" + x + ".txt", Context.MODE_PRIVATE)));
+                            BufferedWriter file = new BufferedWriter(new OutputStreamWriter(openFileOutput("ArchivoMyPaginaWeb" + x + ".txt", Context.MODE_PRIVATE)));
                             file.write(textoJson);
                             file.close();
                             mensaje = "Usuario Registrado";
+                            Name.setText("");
+                            firstName.setText("");
+                            lastName.setText("");
+                            userName.setText("");
+                            Mail.setText("");
+                            Age.setText("");
+                            Number.setText("");
+                            Gender1.setChecked(false);
+                            Gender2.setChecked(false);
+                            Type1.setChecked(false);
+                            Type2.setChecked(false);
+                            Password.setText("");
                             BucleArchivo = false;
                         }
                     }

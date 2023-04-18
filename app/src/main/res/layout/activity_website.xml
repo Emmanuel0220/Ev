@@ -27,8 +27,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
@@ -41,24 +41,23 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:background="#193336"
-                android:textColor="#F9FEFE"
                 android:text="          MECANICO"
-                android:textSize="24dp"/>
+                android:textColor="#F9FEFE"
+                android:textSize="24dp" />
 
             <TextView
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:background="#193336"
-                android:textColor="#F9FEFE"
                 android:text="          Vicor, 31 años. \n Soy una persona que cuenta con certificación que avala mi conocimiento."
-                android:textSize="16dp"/>
+                android:textColor="#F9FEFE"
+                android:textSize="16dp" />
 
             <ImageView
+                android:id="@+id/CONOCER"
                 android:layout_width="300dp"
                 android:layout_height="210dp"
-                android:id="@+id/CONOCER"
-                android:src="@drawable/mecanico"
-                />
+                android:src="@drawable/mecanico" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -70,24 +69,23 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:background="#193336"
-                android:textColor="#F9FEFE"
                 android:text="          COCINERO"
-                android:textSize="24dp"/>
+                android:textColor="#F9FEFE"
+                android:textSize="24dp" />
 
             <TextView
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:background="#193336"
-                android:textColor="#F9FEFE"
                 android:text="          Alex, 37 años. \n Pastelero experimentado y certificado, mis años en la industria hablan por mi."
-                android:textSize="16dp"/>
+                android:textColor="#F9FEFE"
+                android:textSize="16dp" />
 
             <ImageView
+                android:id="@+id/COCINA"
                 android:layout_width="300dp"
                 android:layout_height="170dp"
-                android:id="@+id/COCINA"
-                android:src="@drawable/pastelero"
-                />
+                android:src="@drawable/pastelero" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -99,24 +97,23 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:background="#193336"
-                android:textColor="#F9FEFE"
                 android:text="          TRANSPORTE"
-                android:textSize="24dp"/>
+                android:textColor="#F9FEFE"
+                android:textSize="24dp" />
 
             <TextView
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:background="#193336"
-                android:textColor="#F9FEFE"
                 android:text="          Ismael, 28 años. \n Soy joven pero no quita que no sepa hacer bien mi trabajo."
-                android:textSize="16dp"/>
+                android:textColor="#F9FEFE"
+                android:textSize="16dp" />
 
             <ImageView
+                android:id="@+id/CAMBIA"
                 android:layout_width="300dp"
                 android:layout_height="170dp"
-                android:id="@+id/CAMBIA"
-                android:src="@drawable/refaccion"
-                />
+                android:src="@drawable/refaccion" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -130,19 +127,19 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="#193336"
                 android:onClick="Ingremapa"
-                android:textColor="#F9FEFE"
                 android:text="ENTRAR AL MAPA"
-                android:textSize="24dp"/>
+                android:textColor="#F9FEFE"
+                android:textSize="24dp" />
 
             <Button
                 android:id="@+id/bchats"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#193336"
-                android:textColor="#F9FEFE"
                 android:onClick="Ingrechat"
                 android:text="CHATEAR"
-                android:textSize="24dp"/>
+                android:textColor="#F9FEFE"
+                android:textSize="24dp" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
