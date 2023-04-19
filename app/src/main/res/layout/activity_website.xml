@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Website"
     android:orientation="vertical"
     android:background="#8DC5FE">
@@ -130,6 +131,13 @@
                 android:text="ENTRAR AL MAPA"
                 android:textColor="#F9FEFE"
                 android:textSize="24dp" />
+
+            <ImageView
+                android:id="@+id/imageViewLVAM1"
+                android:layout_width="50dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/mapbutton" />
 
             <Button
                 android:id="@+id/bchats"

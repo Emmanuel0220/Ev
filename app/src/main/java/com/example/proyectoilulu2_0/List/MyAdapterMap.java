@@ -9,17 +9,18 @@ import android.widget.ImageView;
 
 import com.example.proyectoilulu2_0.Json.Cuenta;
 import com.example.proyectoilulu2_0.R;
+import com.example.proyectoilulu2_0.Json.Cuenta;
 
 import java.io.Serializable;
 import java.util.List;
 
-public class MyAdapterEdit extends BaseAdapter implements Serializable {
+public class MyAdapterMap extends BaseAdapter implements Serializable {
     private List<Cuenta> list;
     private Context context;
     private LayoutInflater layoutInflater;
     private int []imagenes = {R.drawable.editbutton,R.drawable.removebutton};
 
-    public MyAdapterEdit(List<Cuenta> list, Context context) {
+    public MyAdapterMap(List<Cuenta> list, Context context) {
         this.list = list;
         this.context = context;
         if( context != null)
@@ -58,8 +59,8 @@ public class MyAdapterEdit extends BaseAdapter implements Serializable {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         ImageView imageView = null;
-        view = layoutInflater.inflate(R.layout.activity_list_view_actividad_editar, null );
-        imageView = view.findViewById(R.id.imageViewLVAE1);
+        view = layoutInflater.inflate(R.layout.activity_list_view_actividad_mapa, null );
+        imageView = view.findViewById(R.id.imageViewLVAM1);
         imageView.setImageResource(list.get(i).getImage());
 
         return view;

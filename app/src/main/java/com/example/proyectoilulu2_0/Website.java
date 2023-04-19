@@ -20,7 +20,7 @@ public class Website extends AppCompatActivity {
     }
 
     public void Ingremapa (View v){
-        Intent intent = new Intent (Website.this, Forgotpass.class);
+        Intent intent = new Intent (Website.this, MapList.class);
         startActivity( intent );
     }
     public void Ingrechat (View v){

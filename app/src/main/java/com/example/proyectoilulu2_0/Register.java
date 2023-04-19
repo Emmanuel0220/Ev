@@ -119,7 +119,7 @@ public class Register extends AppCompatActivity {
                             Info datos = json.leerJson(completoTexto);
                             String ValoruserName2 = datos.getUserName();
                             String ValorMail2 = datos.getMail();
-                            int ValorNumber2 = datos.getNumber();
+                            int ValorNumber2 = (int) datos.getNumber();
 
                             if (ValoruserName.equals(ValoruserName2) || ValorMail.equals(ValorMail2) || ValorNumber == ValorNumber2) {
                                 if(ValorMail.equals(ValorMail2)){mensaje = "Correo Ya Registrado";}

@@ -8,8 +8,10 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.proyectoilulu2_0.Encriptación.EncripBitMap;
 import com.example.proyectoilulu2_0.Json.Cuenta;
 import com.example.proyectoilulu2_0.R;
+import com.example.proyectoilulu2_0.Json.Cuenta;
 
 import java.io.Serializable;
 import java.util.List;
@@ -18,7 +20,7 @@ public class MyAdapter extends BaseAdapter implements Serializable {
     private List<Cuenta> list;
     private Context context;
     private LayoutInflater layoutInflater;
-    private int []imagenes = {R.drawable.editbutton, R.drawable.removebutton};
+    private int []imagenes = {R.drawable.editbutton,R.drawable.removebutton};
 
     public MyAdapter(List<Cuenta> list, Context context) {
         this.list = list;
@@ -58,13 +60,24 @@ public class MyAdapter extends BaseAdapter implements Serializable {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        TextView textView = null;
+        TextView textView1 = null;
+        TextView textView2 = null;
+        TextView textView3 = null;
         ImageView imageView = null;
         view = layoutInflater.inflate(R.layout.activity_list_view_actividad, null );
-        textView = view.findViewById(R.id.textViewId);
-        imageView = view.findViewById(R.id.imageViewLUser);
-        textView.setText(list.get(i).getNameCuenta());
-        imageView.setImageResource(list.get(i).getImage());
+        textView1 = view.findViewById(R.id.textViewLVA1);
+        textView2 = view.findViewById(R.id.textViewLVA2);
+        textView3 = view.findViewById(R.id.textViewLVA3);
+        imageView = view.findViewById(R.id.imageViewLVAUser);
+        textView1.setText(list.get(i).getNameCuenta());
+        textView2.setText("Lat: " + list.get(i).getLocation().getLatitude());
+        textView3.setText("Lon: " + list.get(i).getLocation().getLongitude());
+        if(list.get(i).isTipo() != true) {
+            imageView.setImageResource(list.get(i).getImage());
+        }else{
+            EncripBitMap EBM = new EncripBitMap();
+            imageView.setImageBitmap(EBM.desCifrar(list.get(i).getImageP()));
+        }
 
         return view;
     }
