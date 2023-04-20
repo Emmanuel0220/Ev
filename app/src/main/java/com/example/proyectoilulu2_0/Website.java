@@ -46,12 +46,22 @@ public class Website extends AppCompatActivity {
                 Intent intent1 = new Intent (Website.this, Login.class);
                 startActivity( intent1 );
                 break;
-            case R.id.MenuNuevoId:
-                int numArchivo = getIntent().getExtras().getInt("numArchivo");
-                Intent intent2 = new Intent (Website.this, EditList.class);
-                intent2.putExtra("numArchivo", numArchivo);
-                intent2.putExtra("numContext", 1);
+            case R.id.MenuBreakingApi:
+                int numArchivo1 = getIntent().getExtras().getInt("numArchivo");
+                int numLista1 = getIntent().getExtras().getInt("numLista");
+                Intent intent2 = new Intent (Website.this, WebApi.class);
+                intent2.putExtra("numArchivo", numArchivo1);
+                intent2.putExtra("numLista", numLista1);
                 startActivity( intent2 );
+                break;
+            case R.id.MenuNuevoId:
+                int numArchivo2 = getIntent().getExtras().getInt("numArchivo");
+                int numLista2 = getIntent().getExtras().getInt("numLista");
+                Intent intent3 = new Intent (Website.this, EditList.class);
+                intent3.putExtra("numArchivo", numArchivo2);
+                intent3.putExtra("numContext", 1);
+                intent3.putExtra("numLista", numLista2);
+                startActivity( intent3 );
                 break;
             default:
                 seleccion = "sin opcion %s";
@@ -61,3 +71,4 @@ public class Website extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 }
+
