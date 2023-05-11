@@ -9,7 +9,6 @@ import android.widget.ImageView;
 
 import com.example.proyectoilulu2_0.Json.Cuenta;
 import com.example.proyectoilulu2_0.R;
-import com.example.proyectoilulu2_0.Json.Cuenta;
 
 import java.io.Serializable;
 import java.util.List;

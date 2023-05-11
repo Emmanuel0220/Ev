@@ -29,6 +29,19 @@
             android:name=".Login"
             android:exported="false" />
         <activity
+            android:name=".Chat"
+            android:exported="false" />
+        <activity
+            android:name=".MapList"
+            android:exported="false" />
+        <activity
+            android:name=".ListMain"
+            android:exported="false" />
+        <activity
+            android:name=".WebApi"
+            android:exported="false" />
+
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

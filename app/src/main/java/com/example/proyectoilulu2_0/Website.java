@@ -11,6 +11,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.List;
+
 public class Website extends AppCompatActivity {
 
     @Override
@@ -20,7 +22,7 @@ public class Website extends AppCompatActivity {
     }
 
     public void Ingremapa (View v){
-        Intent intent = new Intent (Website.this, MapList.class);
+        Intent intent = new Intent (Website.this, WebApi.class);
         startActivity( intent );
     }
     public void Ingrechat (View v){
