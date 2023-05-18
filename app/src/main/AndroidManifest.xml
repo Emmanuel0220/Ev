@@ -20,6 +20,9 @@
             android:name=".Website"
             android:exported="false" />
         <activity
+            android:name=".EditList"
+            android:exported="false" />
+        <activity
             android:name=".Register"
             android:exported="false" />
         <activity

@@ -22,7 +22,7 @@ public class Website extends AppCompatActivity {
     }
 
     public void Ingremapa (View v){
-        Intent intent = new Intent (Website.this, WebApi.class);
+        Intent intent = new Intent (Website.this, EditList.class);
         startActivity( intent );
     }
     public void Ingrechat (View v){
