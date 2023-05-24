@@ -5,7 +5,7 @@
     android:id="@+id/ConstraintLayoutWA"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EB2C2C2C"
+    android:background="#8DC5FE"
     tools:context=".WebApi">
 
     <View

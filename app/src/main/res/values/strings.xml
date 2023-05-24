@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Everything Works</string>
+    <string name="app_name">MyPaginaWeb</string>
     <string name="Name">Nombre</string>
     <string name="firstName">Apellido Paterno</string>
     <string name="lastName">Apellido Materno</string>
@@ -21,8 +21,8 @@
     <string name="writeGender1">Masculino</string>
     <string name="writeGender2">Femenino</string>
     <string name="writeType">Seleccionar el Tipo de Persona</string>
-    <string name="writeType1">Cliente</string>
-    <string name="writeType2">Vendedor</string>
+    <string name="writeType1">Alumno</string>
+    <string name="writeType2">Profesor</string>
     <string name="writePassword">Escribir Contra</string>
     <string name="login">Iniciar Sesión</string>
     <string name="register">Registrarse</string>
@@ -31,9 +31,8 @@
     <string name="forgotPassword">Olvidé mi contraseña</string>
     <string name="recoverPassword">Recuperar contraseña</string>
     <string name="welcome">Welcome to the Jungle</string>
-    <string name="todo">Todo</string>
-    <string name="todos">Todo</string>
     <string name="menu_nuevo">Nuevo</string>
+    <string name="menu_breaking">Breaking Bad Quotes</string>
     <string name="menu_copiar">Cerrar Sesión</string>
     <string name="list_name">Nombre de la Cuenta</string>
     <string name="list_nameHint">Escribir el Nombre</string>
@@ -51,7 +50,6 @@
     <string name="list_button_back">Anterior</string>
     <string name="list_map_update">Actualizar</string>
     <string name="list_map_back">Volver</string>
-    <string name="menu_breaking">Crear Publicación</string>
     <string name="breaking_title">Random Breaking Bad Quotes</string>
     <string name="breaking_refresh">Recargar</string>
     <string name="breaking_return">Regresar</string>
@@ -62,5 +60,4 @@
     <string name="recovery_newpass2">Comprobar Nueva Contraseña</string>
     <string name="recovery_writenewpass2">Reingrese la Nueva Contraseña</string>
     <string name="recovery_button">Restablecer Contraseña</string>
-
 </resources>

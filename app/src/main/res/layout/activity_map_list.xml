@@ -9,7 +9,7 @@
     android:paddingTop="16dp"
     android:paddingRight="16dp"
     android:paddingBottom="16dp"
-    android:background="#EB2C2C2C"
+    android:background="#8DC5FE"
     tools:context=".MapList">
 
     <org.osmdroid.views.MapView

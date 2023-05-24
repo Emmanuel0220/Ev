@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EB2C2C2C"
+    android:background="#8DC5FE"
     tools:context=".Recoverpass">
 
     <View
@@ -24,7 +24,7 @@
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ipn" />
+        app:srcCompat="@drawable/splash" />
 
     <TextView
         android:id="@+id/textViewRPpass"
